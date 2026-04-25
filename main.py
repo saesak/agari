@@ -17,6 +17,7 @@ from PIL import Image, ImageTk
 
 HERE: str = os.path.dirname(os.path.abspath(__file__))
 MODEL_PATH: str = os.path.join(HERE, "face_landmarker.task")
+ICON_PATH: str = os.path.join(HERE, "icon.png")
 
 PREVIEW_W: int = 320
 PREVIEW_H: int = 240
@@ -233,6 +234,18 @@ class App:
 
 def main() -> None:
     root = tk.Tk()
+
+    # Window/dock icon. Wrapped because a missing or unreadable icon shouldn't
+    # crash the app — the title bar staying default is fine.
+    if os.path.exists(ICON_PATH):
+        try:
+            icon_photo = ImageTk.PhotoImage(Image.open(ICON_PATH))
+            root.iconphoto(True, icon_photo)
+            # Keep a reference; if Python GCs the PhotoImage, Tk drops the icon.
+            root._agari_icon = icon_photo  # type: ignore[attr-defined]
+        except Exception:
+            pass
+
     cap = cv2.VideoCapture(0)
     cap.set(cv2.CAP_PROP_FRAME_WIDTH, PREVIEW_W)
     cap.set(cv2.CAP_PROP_FRAME_HEIGHT, PREVIEW_H)
