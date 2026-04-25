@@ -10,6 +10,12 @@ Hands-free manga and webtoon reader. Open your mouth, page scrolls/turns.
 
 For manga websites that require clicking, webtoons that require scrolling, and dense PDFs — without destroying your wrist. MediaPipe Face Landmarker reads the `jawOpen` blendshape; a quick mouth-open fires a click or scroll via `pyautogui`. Works in whatever reader you have in the foreground — Webtoons, MangaDex, Tachidesk, PDFs. Zero calibration, runs 100% locally, no network calls ever.
 
+## Demo
+
+<p align="center">
+  <video src="demo.mp4" controls muted loop width="640"></video>
+</p>
+
 ## Install
 
 Requires Python 3.10+ and [uv](https://docs.astral.sh/uv/getting-started/installation/).
