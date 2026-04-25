@@ -13,8 +13,10 @@ For manga websites that require clicking, webtoons that require scrolling, and d
 ## Demo
 
 <p align="center">
-  <video src="demo.mp4" controls muted loop width="640"></video>
+  <img src="demo.gif" alt="agari demo" width="640">
 </p>
+
+[Full demo (MP4)](demo.mp4)
 
 ## Install
 
