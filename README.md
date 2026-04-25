@@ -12,6 +12,8 @@ For manga websites that require clicking, webtoons that require scrolling, and d
 
 ## Demo
 
+GIF Version
+
 <p align="center">
   <img src="demo.gif" alt="agari demo" width="640">
 </p>
